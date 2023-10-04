@@ -49,5 +49,61 @@ def val():  # sourcery skip: for-index-underscore
     promedio=resultado/valor
     print(resultado)
     print(promedio)
+# val()
+
+def nombress():  # sourcery skip: for-index-underscore
+    #input: la lista de nombres y el nombre a buscar en la lista
+    #output: si el nombre es true en la lista
+    
+    n = int(input("ingrese la cantidad: "))
+    nombres= [str for i in range(n)]
+    for i in range(n):
+        nombres[i]=input("ingrese el nombre: ")
+    
+    buscado = input("Ingrese el nombre a buscar: ")
+    encontrado = False
+    
+    for i in range(n):
+        if nombres[i] == buscado:
+            encontrado = True
+    
+    if encontrado:
+        print("se encontro.")
+    else:
+        print("no se encontro")
+    
+# nombress()
+
+def agregarTextos(): #Agregas cadenas de texto para un rango a definir
+    n = int(input("ingrese la cantidad de cadenas de texto: "))
+    nombres= [str for i in range(n)]
+    for i in range(n):
+        nombres[i]=input("ingrese el texto: ")
+
+def evaluaciones2():
+    # En un curso de 5 estudiantes se toman 3 parciales. Diseñar un algoritmo
+    # para registrar las notas de los alumnos en una matriz.
+    # Calcular el promedio de cada alumno y el promedio de cada parcial.
+    matriz = [[0.0] * 3 for i in range(5)]
+
+    for alumno in range(5):
+        for parcial in range(3):
+            nota = float(input(f"Ingrese la nota del alumno {alumno+1} en el parcial {parcial+1}: "))
+            matriz[alumno][parcial] = nota
+
+    for alumno in range(5):
+        suma_notas = 0.0
+        for parcial in range(3):
+            suma_notas += matriz[alumno][parcial]
+        promedio_alumno = suma_notas / 3
+        print(f"El promedio del alumno {alumno+1} es: {promedio_alumno}")
+
+    for parcial in range(3):
+        suma_notas = 0.0
+        for alumno in range(5):
+            suma_notas += matriz[alumno][parcial]
+        promedio_parcial = suma_notas / 5
+        print(f"El promedio del parcial {parcial+1} es: {promedio_parcial}")
+
 
 print("hola que hace")
