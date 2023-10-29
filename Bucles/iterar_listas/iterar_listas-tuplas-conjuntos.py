@@ -35,13 +35,13 @@ for i,num in enumerate(numeros):
 else:
     print("el bucle termino.")
 
-def val():  # sourcery skip: for-index-underscore
+def val(valor,valores):  # sourcery skip: for-index-underscore
     #hacer: la suma de todos los elementos y su media aritmetica
     valor=int(input("cuantos valores agregara?: "))
     valores=[int for i in range(valor)]
     resultado = 0
     promedio=0
-    for i in range(5):
+    for i in range(valor):
     
         valores[i]=int(input("Agregar valores: "))
         resultado=resultado+valores[i]

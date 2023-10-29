@@ -4,6 +4,15 @@ frutas = ["banana", "manzana", "pera", "naranja", "mandarina", "granada"]
 cadena_texto = "Hola mundo como estas?"
 numeros = [2,4,76,33,2]
 
+#recorrer una lista al revez
+def capicua(numero):
+    variable=str(numero)
+
+    comparador2=[]
+
+    for i in variable[::-1]:
+        comparador2 += i
+
 #evitando que coma una ["manzana"]
 for fruta in frutas:
     if fruta == "manzana":
